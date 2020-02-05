@@ -1,3 +1,8 @@
+
+
+
+
+
 # CSS to the Rescue @cmda-minor-web 19-2
 
 _This course is in English_
@@ -11,6 +16,10 @@ In this three week course you are going to create an innovative, experimantal, y
 - _You have been experimenting: Have the learning goals been stretched?_
 
 [Rubric](https://docs.google.com/spreadsheets/d/1Xv48MSiACNmnM6nXpGGUb8mJDC459uSaxJszO_zLEp8/edit?usp=sharing)
+
+## REQS
+Trying to conform to the W3C standards on accesability.
+Reflecting changes based on weather data.
 
 ## Programm
 
@@ -62,3 +71,7 @@ Goals: Blow us away.
 <!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
 
 <!-- How about a license here? 📜 (or is it a licence?) 🤷 -->
+
+
+
+
