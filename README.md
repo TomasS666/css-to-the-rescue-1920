@@ -5,10 +5,14 @@
 ## <poster image will come here soon>
 
 # Description
+For the project CSS to the rescue I want to explore the most inovative, sometimes rediculous selectors and CSS features. With the selector-first approach I'm gonna try to make something I would have never considered a possibility using pure CSS only.
+
+This might be a bit messy, but the main goal is to learn as much as possible about CSS.
 
 ## How to install
 
 ## Concept
+My concept resolves around a bar. A simple nearby local pub / bar. But this time the user plays the bartender or friend that drunks you up until the point of no return. With a selection of drinks you can alternate the alcohol premilage.
 
 ## Features
 
