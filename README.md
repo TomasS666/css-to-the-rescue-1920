@@ -1,48 +1,34 @@
-# CSS to the Rescue @cmda-minor-web 19-20
+<Maybe a table of contents here? 📚>
 
-_This course is in English_
+### Demo : 
 
-In this three week course you are going to create an innovative, experimantal, yet pleasurable user experience by using CSS and SVG. No Javascrpt allowed.
+## <poster image will come here soon>
 
-## Learning goals
-- _You understand the broader scope of CSS: You can show that CSS can be used for more than just styling web pages._
-- _You understand the progressive enhancement parts of CSS: You can show that you can use the cascade, inheritance and specificity in your project_
-- _You understand the interactive parts of CSS: Is the UX fully enhanced within in given CSS scope?_
-- _You have been experimenting: Have the learning goals been stretched?_
+# Description
+For the project CSS to the rescue I want to explore the most inovative, sometimes rediculous selectors and CSS features. With the selector-first approach I'm gonna try to make something I would have never considered a possibility using pure CSS only.
 
-[Rubric](https://docs.google.com/spreadsheets/d/1Xv48MSiACNmnM6nXpGGUb8mJDC459uSaxJszO_zLEp8/edit?usp=sharing)
+This might be a bit messy, but the main goal is to learn as much as possible about CSS.
 
-## Programm
+## How to install
 
-### Week 1 - 👁 C what you did there
+## Concept
+My concept resolves around a bar. A simple nearby local pub / bar. But this time the user plays the bartender or friend that drunks you up until the point of no return. With a selection of drinks you can alternate the alcohol premilage.
 
-[See all the details of week 1 here](week1/).
+## Features
 
-Goals of this week: 
+## Wishlist
 
-- Be inspired
-- Discuss hot CSS topics.
-- Get going!
+## References
 
-<!-- [Opdrachten](https://drive.google.com/open?id=1OVhWQNaCgSluYviTKKWcApkyPd23xow1PiExb8GYANM) -->
+## License
 
-<!-- [Slides](https://drive.google.com/open?id=1Rjl9xqXoKniQSRJPdkU1O5YwWC33SJK8KiV0a-H_xZU) -->
 
-### Week 2 - Create Stuff, 🙃 Smile 
 
-This week’s goals: Moar inspiration, create stuff, break stuff, and learn from each other.
 
-<!-- [Opdrachten](https://drive.google.com/open?id=1GMDTdW3LycAYpZSFI6gk_lrKrx8-zLWrNh69aaVEH5Y) -->
 
-<!-- [Slides](https://drive.google.com/open?id=1IqQeu1m0dQiSC_KCvrn8eencAgtYe7X6qT-gm0n9Bmc) -->
 
-### Week 3 - 🎪 Show time
 
-Goals: Blow us away.
 
-<!-- [Opdrachten](https://drive.google.com/open?id=13pKQu72pshaEzKw9q5JHLa-aop85nMP6nDCdqioWjoQ) -->
-
-<!-- [Slides](https://drive.google.com/open?id=1BSzGYNLMgtHD4HRnK7f0DgyTv4Pg3xsQwD_eYNo7v0Y) -->
 
 
 <!-- Add a link to your live demo in Github Pages 🌐-->
@@ -62,3 +48,7 @@ Goals: Blow us away.
 <!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
 
 <!-- How about a license here? 📜 (or is it a licence?) 🤷 -->
+
+
+
+
