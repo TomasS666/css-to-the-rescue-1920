@@ -58,16 +58,40 @@ input[type="radio"][value="beer"]:checked ~ section:nth-of-type(1) .person heade
   cursor: url("../img/beer-rotate.png"), auto;
 }
 
-
-
-input[id="alc-1"] ~ section div.person::after{
-  /* color:black; */
-  content: attr(data-value);
+input[type="radio"][value="1"]:checked ~ section .person::after{
+  content: '1';
 }
 
-datalist{
-  display: block;
+input[type="radio"][value="1"]:checked ~ section:nth-of-type(1){
+  animation: drunk-section 3s infinite;
+  background-color: red;
 }
+
+@keyframes drunk-section{
+  0%, 100%{
+    transform: perspective(1000px) rotateY(0deg);
+    transform-origin: left;
+  }
+
+  50%{
+    transform-origin: left;
+    transform: perspective(1000px) rotateY(15deg);
+  }
+}
+
+/* input[type="radio"][value="2"]:checked ~ section .person::after{
+  content: '2';
+}
+input[type="radio"][value="3"]:checked ~ section .person::after{
+  content: '3';
+}
+input[type="radio"][value="4"]:checked ~ section .person::after{
+  content: '4';
+}
+
+input[type="radio"][value="5"]:checked ~ section .person::after{
+  content: '5';
+} */
 
 section:nth-of-type(1){
   position: relative;
