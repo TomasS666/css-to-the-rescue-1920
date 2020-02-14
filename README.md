@@ -14,6 +14,23 @@ This might be a bit messy, but the main goal is to learn as much as possible abo
 ## Concept
 My concept resolves around a bar. A simple nearby local pub / bar. But this time the user plays the bartender or friend that drunks you up until the point of no return. With a selection of drinks you can alternate the alcohol premilage.
 
+## Expirements
+### Selectors
+```:nth-of-type()```
+
+### Pseudo selectors
+```::before```
+```::after```
+
+### @media
+```print```
+```prefers-reduced-motion: reduce```
+
+### Properties
+```rotate3d()```
+```perspective()```
+```page-break-after```
+
 ## Features
 
 ## Wishlist
