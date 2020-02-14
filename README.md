@@ -24,12 +24,14 @@ My concept resolves around a bar. A simple nearby local pub / bar. But this time
 
 ### @media
 ```print```
+```portrait, landscape```
 ```prefers-reduced-motion: reduce```
 
 ### Properties
 ```rotate3d()```
 ```perspective()```
 ```page-break-after```
+
 
 ## Features
 
