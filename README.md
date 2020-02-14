@@ -46,6 +46,8 @@ My concept resolves around a bar. A simple nearby local pub / bar. But this time
 CSS counters. I tried to hack them and use them as counters. 
 I managed to do that, but it doesn't
 
+* Tried 
+
 ## Features
 
 ## Wishlist
