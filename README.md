@@ -30,6 +30,11 @@ My concept resolves around a bar. A simple nearby local pub / bar. But this time
 ```::before```
 ```::after```
 
+### States
+```:hover```
+```:lang```
+
+
 ### @media
 ```print```
 ```portrait, landscape```
@@ -41,6 +46,8 @@ My concept resolves around a bar. A simple nearby local pub / bar. But this time
 ```page-break-after```
 ```cursor```
 
+## Values
+``
 
 ## Expirements that didn't work out
 CSS counters. I tried to hack them and use them as counters. 
