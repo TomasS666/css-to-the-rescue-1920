@@ -6,16 +6,15 @@
   --black: #000;
 }
 
+:lang(ar) *{
+  direction: rtl;
+}
+
 body{
   font-size: 100%;
   font-family: sans-serif;
   background-color: #673013;
-  animation: var(--animation) drunk-mode .3s infinite alternate ;
-}
-
-section:nth-of-type(1){
-  background-color: burlywood;
-  height: 40rem;
+  /* animation: var(--animation) drunk-mode .3s infinite alternate ; */
 }
 
 label{
@@ -96,53 +95,107 @@ input[type="radio"][value="5"]:checked ~ section .person::after{
 section:nth-of-type(1){
   position: relative;
   /* cursor: url("../img/beer1.png"), auto; */
-  height: 10rem;
+  /* height: 10rem; */
   background-color: var(--test);
+  display: flex;
+  justify-content: center;
+  background-color: burlywood;
+  height: 40rem;
 }
+
+
 
 /* section:nth-of-type(1) .person header{
   cursor: url("../img/beer-rotate.png"), auto;
 } */
 
 .person{
-  width: 30rem;
-  height: 30rem;
+  /* width: 30rem;
+  height: 30rem; */
   margin: 5rem 0 0 0;
 }
 
-.person header{
-  height: 5rem;
-  width: 4rem;
-  border-radius: 50%;
+.person header,
+.person header::after{
+  height: 25vw;
+  width: 50vw;
   background-color: sandybrown;
+}
+
+.person header{
+  border-radius: 50vw 50vw 0 0;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
+.person header::after{
+  content: '';
+  position: absolute;
+  top: 25.25vw;
+  transform: translate(0px, 5rem);
+  border-radius: 0 0 50vw 50vw;
+  transition: transform .5s;
+}
+
+.person header::before{
+  content: '';
+  position: absolute;
+  top: 25.25vw;
+
+}
+
+.person header:hover::after{
+  transform: translate(0px, 13vw);
+}
+
 .person header > div:nth-of-type(1){
-  /* transform: translate(10px, 20px); */
+  transform: translate(0px, 13vw);
   display: flex;
   width: 50%;
   justify-content: space-between;
 }
 
 .person header > div:nth-of-type(1) div{
-  margin-top: 1rem;
-  width: .5rem;
-  height: .5rem;
-  border-radius: 50%;
+  width: 2.5vw;
+  height: 2.5vw;
+  border-radius: 3vw;
   background-color: var(--black);
 }
 
-.person header > div:nth-of-type(2){
-  border-radius: 50%;
-  width: .5rem;
-  height: .5rem;
-  background-color: #000;
+/* Eyebrows */
+.person header > div:nth-of-type(1) div::before{
+  content: '';
+  height: 1vh;
+  width: 7.5vw;
+  position: absolute;
+  background-color: var(--black);
+  transform: translate(-30%, -145%);
+  min-height: .5rem;
 }
 
+.person header > div:nth-of-type(1) div:nth-of-type(1)::before,
+.person header > div:nth-of-type(1) div:nth-of-type(2)::before{
+  transition: transform .5s;
+}
 
+.person header > div:nth-of-type(1) div:nth-of-type(1)::before{
+  transform: translate(-60%, -145%) rotate(-45deg);
+}
+
+.person header > div:nth-of-type(1) div:nth-of-type(2)::before{
+  transform: translate(0%, -145%) rotate(45deg);
+}
+
+.person:hover header > div:nth-of-type(1) div:nth-of-type(1)::before{
+  transform: translate(-60%, -300%) rotate(-45deg);
+  transition: .5s;
+}
+
+.person:hover header > div:nth-of-type(1) div:nth-of-type(2)::before{
+  transform: translate(0%, -300%) rotate(45deg);
+  transition: .5s;
+}
 
 div.person::after{
   /* content: "Alc. "counter(alcohol-level)"%"; */
@@ -150,6 +203,14 @@ div.person::after{
   top: 1rem;
   left: 15rem;
   font-size: 2rem;
+}
+
+input[name=test]:checked ~ section{
+  animation: drunk-mode-container 10s infinite;
+}
+
+input[name=test]:checked ~ section .person{
+  animation: drunk-mode 10s infinite;
 }
 
 
@@ -180,18 +241,85 @@ div.person header:hover{
   }
 }
 
-@keyframes drunk-mode{
-  from{
+section{
+  page-break-after: always ;
+}
+
+@keyframes drunk-mode-container{
+
+
+  0%, 40%, 80%{
+    filter: blur(0);
+
+  }
+
+  20%, 60%{
+    filter: blur(12px);
+
+  }
+  /* 0%, 30%, 60%, 90%{
     transform: rotate(-10deg);
   }
-  to{
-    transform: rotate(10deg);
+
+  0%{
+    transform: rotate(-10deg);
+    filter: blur(0);
   }
+  30%{
+    filter: blur(1px);
+  }
+  40%{
+    filter: blur(0);
+  }
+  45%{
+    filter:blur(8px)
+  }
+  55%{
+    filter: blur(1px);
+  }
+
+  70%{
+    filter: blur(20px);
+  }
+  100%{
+    filter: blur(0px);
+    transform: rotate(10deg);
+  } */
 }
+
+
+@keyframes drunk-mode{
+
+
+  0%, 40%, 80%{
+    transform: perspective(1000px) rotate3d(1, 1, 1, -30deg) ;
+  }
+
+  20%, 60%{
+    transform: perspective(1000px) rotate3d(1, 1, 1, 30deg);
+  }
+
+ 
+}
+
+/* * ~ section{
+  page-break-after: always  ;
+} */
 
 
 @media (prefers-reduced-motion: reduce) {
   :root{
     --animation: initial;
+  }
+}
+
+@media print{
+  body{
+    background-color: red;
+    -webkit-print-color-adjust: exact;
+  }
+
+  * ~ section{
+    page-break-after: always  ;
   }
 }
