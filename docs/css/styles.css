@@ -17,11 +17,30 @@ body{
   /* animation: var(--animation) drunk-mode .3s infinite alternate ; */
 }
 
+form{
+  display: flex;
+}
+
 label{
   display: block;
+  width: 7rem;
   height: 7rem;
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center center;
+}
+
+label:hover{
+  transition: transform 9s;
+  /* backface-visibility: visible; */
+}
+
+label:nth-last-of-type(odd):hover{
+  transform: scale(1.1) rotateX(360deg) perspective(1000px);
+}
+
+label:nth-last-of-type(even):hover{
+  transform: scale(1.1) rotateY(-360deg) perspective(1000px);
 }
 
 /* label:not([for^="alc-"])::before{
@@ -41,11 +60,15 @@ label[for=beer]{
   background-image: url(../img/beer-label.png);
 }
 
+label[for=mushrooms]{
+  background-image: url(../img/mushroom.png);
+}
+
 input[type="radio"][value="vodka"]:checked ~ section:nth-of-type(1){
   cursor: url("../img/vodka.png"), auto;
 }
 
-input[type="radio"][value="vodka"]:checked ~ section:nth-of-type(1) .person header{
+input[type="radio"][value="vodka"]:checked ~ section:nth-of-type(1) article header{
   cursor: url("../img/vodka-rotate.png"), auto;
 }
 
@@ -53,11 +76,11 @@ input[type="radio"][value="beer"]:checked ~ section:nth-of-type(1){
   cursor: url("../img/beer1.png"), auto;
 }
 
-input[type="radio"][value="beer"]:checked ~ section:nth-of-type(1) .person header{
+input[type="radio"][value="beer"]:checked ~ section:nth-of-type(1) article header{
   cursor: url("../img/beer-rotate.png"), auto;
 }
 
-input[type="radio"][value="1"]:checked ~ section .person::after{
+input[type="radio"][value="1"]:checked ~ section article::after{
   content: '1';
 }
 
@@ -78,17 +101,17 @@ input[type="radio"][value="1"]:checked ~ section:nth-of-type(1){
   }
 }
 
-/* input[type="radio"][value="2"]:checked ~ section .person::after{
+/* input[type="radio"][value="2"]:checked ~ section article::after{
   content: '2';
 }
-input[type="radio"][value="3"]:checked ~ section .person::after{
+input[type="radio"][value="3"]:checked ~ section article::after{
   content: '3';
 }
-input[type="radio"][value="4"]:checked ~ section .person::after{
+input[type="radio"][value="4"]:checked ~ section article::after{
   content: '4';
 }
 
-input[type="radio"][value="5"]:checked ~ section .person::after{
+input[type="radio"][value="5"]:checked ~ section article::after{
   content: '5';
 } */
 
@@ -105,31 +128,31 @@ section:nth-of-type(1){
 
 
 
-/* section:nth-of-type(1) .person header{
+/* section:nth-of-type(1) article header{
   cursor: url("../img/beer-rotate.png"), auto;
 } */
 
-.person{
+article{
   /* width: 30rem;
   height: 30rem; */
   margin: 5rem 0 0 0;
 }
 
-.person header,
-.person header::after{
+article header,
+article header::after{
   height: 25vw;
   width: 50vw;
   background-color: sandybrown;
 }
 
-.person header{
+article header{
   border-radius: 50vw 50vw 0 0;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
-.person header::after{
+article header::after{
   content: '';
   position: absolute;
   top: 25.25vw;
@@ -138,25 +161,25 @@ section:nth-of-type(1){
   transition: transform .5s;
 }
 
-.person header::before{
+article header::before{
   content: '';
   position: absolute;
   top: 25.25vw;
 
 }
 
-.person header:hover::after{
+article header:hover::after{
   transform: translate(0px, 13vw);
 }
 
-.person header > div:nth-of-type(1){
+article header > div:nth-of-type(1){
   transform: translate(0px, 13vw);
   display: flex;
   width: 50%;
   justify-content: space-between;
 }
 
-.person header > div:nth-of-type(1) div{
+article header > div:nth-of-type(1) div{
   width: 2.5vw;
   height: 2.5vw;
   border-radius: 3vw;
@@ -164,7 +187,7 @@ section:nth-of-type(1){
 }
 
 /* Eyebrows */
-.person header > div:nth-of-type(1) div::before{
+article header > div:nth-of-type(1) div::before{
   content: '';
   height: 1vh;
   width: 7.5vw;
@@ -174,30 +197,30 @@ section:nth-of-type(1){
   min-height: .5rem;
 }
 
-.person header > div:nth-of-type(1) div:nth-of-type(1)::before,
-.person header > div:nth-of-type(1) div:nth-of-type(2)::before{
+article header > div:nth-of-type(1) div:nth-of-type(1)::before,
+article header > div:nth-of-type(1) div:nth-of-type(2)::before{
   transition: transform .5s;
 }
 
-.person header > div:nth-of-type(1) div:nth-of-type(1)::before{
+article header > div:nth-of-type(1) div:nth-of-type(1)::before{
   transform: translate(-60%, -145%) rotate(-45deg);
 }
 
-.person header > div:nth-of-type(1) div:nth-of-type(2)::before{
+article header > div:nth-of-type(1) div:nth-of-type(2)::before{
   transform: translate(0%, -145%) rotate(45deg);
 }
 
-.person:hover header > div:nth-of-type(1) div:nth-of-type(1)::before{
+article:hover header > div:nth-of-type(1) div:nth-of-type(1)::before{
   transform: translate(-60%, -300%) rotate(-45deg);
   transition: .5s;
 }
 
-.person:hover header > div:nth-of-type(1) div:nth-of-type(2)::before{
+article:hover header > div:nth-of-type(1) div:nth-of-type(2)::before{
   transform: translate(0%, -300%) rotate(45deg);
   transition: .5s;
 }
 
-div.person::after{
+divarticle::after{
   /* content: "Alc. "counter(alcohol-level)"%"; */
   position: absolute;
   top: 1rem;
@@ -209,17 +232,27 @@ input[name=test]:checked ~ section{
   animation: drunk-mode-container 10s infinite;
 }
 
-input[name=test]:checked ~ section .person{
+/* For animating the section which gets a blur overlay */
+input[name=test]:checked ~ section article{
   animation: drunk-mode 10s infinite;
 }
 
 
+/* Mushrooms */
+input[name=mushrooms]:checked ~ section{
+  animation: trip-mode 10s infinite;
+}
 
-div.person header:hover{
+input[name=test]:checked ~ section article{
+  animation: drunk-mode 10s infinite reverse;
+}
+
+
+divarticle header:hover{
   animation: alcohol-up 3s .3s normal forwards;
 }
 
-@keyframes alcohol-up{
+/* @keyframes alcohol-up{
 
   20%{
     counter-increment: alcohol-level 1;
@@ -239,10 +272,20 @@ div.person header:hover{
   100%{
     counter-increment: alcohol-level 5;
   }
-}
+} */
 
 section{
   page-break-after: always ;
+}
+
+@keyframes trip-mode{
+  0%, 40%, 80%{
+    filter: hue-rotate(1turn) drop-shadow(16px 16px 20px blue) invert(75%);
+  }
+
+  20%, 60%{
+    filter: hue-rotate(0turn) drop-shadow(16px 16px 20px red) invert(0%);
+  }
 }
 
 @keyframes drunk-mode-container{
@@ -293,10 +336,12 @@ section{
 
   0%, 40%, 80%{
     transform: perspective(1000px) rotate3d(1, 1, 1, -30deg) ;
+    filter: hue-rotate(90deg)
   }
 
   20%, 60%{
     transform: perspective(1000px) rotate3d(1, 1, 1, 30deg);
+    filter: hue-rotate(0deg)
   }
 
  

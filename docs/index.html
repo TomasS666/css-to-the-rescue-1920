@@ -28,8 +28,11 @@
   </header>
 
 
-
+<form>
   <label for="vodka">  </label>
+  <label for="beer">  </label>
+  <label for="mushrooms"></label>
+</form>
   <!-- 
     
     I choose to put the labels up front because of a sibling selector I'm using on it
@@ -37,13 +40,15 @@
   -->
     <input type="radio" name="drink" value="vodka" id="vodka">
 
-  <label for="beer">  </label>
+
     <input type="radio" name="drink" value="beer" id="beer">
-    <input type="checkbox" name="test" id="test">
+    <input type="radio" name="test" id="test">
+    
+    <input type="radio" name="mushrooms" id="mushrooms">
   <section>
 
     
-    <div class="person">
+    <article>
       <header>
         <div>
           <div><label for="test"></label></div>
@@ -55,9 +60,10 @@
       </header>
       <main></main>
       <footer></footer>
-    </div>
+    </article>
   </section>
   </div>
+  <span data-text="Oh damn I'm trippin'"></span>
 
 </body>
 

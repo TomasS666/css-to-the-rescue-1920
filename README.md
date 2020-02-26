@@ -34,7 +34,6 @@ My concept resolves around a bar. A simple nearby local pub / bar. But this time
 ```:hover```
 ```:lang```
 
-
 ### @media
 ```print```
 ```portrait, landscape```
@@ -50,14 +49,17 @@ My concept resolves around a bar. A simple nearby local pub / bar. But this time
 ``
 
 ## Expirements that didn't work out
+### CSS Counters
 CSS counters. I tried to hack them and use them as counters. 
-I managed to do that, but it doesn't
+I managed to do that in the following way
 
 * Tried 
 
 ## Features
 
+
 ## Wishlist
+* Make splash screen with zero state and steps with :target? Or checkboxes to hide them after the check (button { next })
 
 ## References
 
