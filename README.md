@@ -11,8 +11,49 @@ This might be a bit messy, but the main goal is to learn as much as possible abo
 
 ## How to install
 
+## Contexts
+Print-stylesheet
+Prefers-reduced-motion
+
+## Challenges / restrictions
+Make it responsive without mediaqueries.
+Design responding to language.
+
 ## Concept
 My concept resolves around a bar. A simple nearby local pub / bar. But this time the user plays the bartender or friend that drunks you up until the point of no return. With a selection of drinks you can alternate the alcohol premilage.
+
+## Expirements
+### Selectors
+```:nth-of-type()```
+
+### Pseudo selectors
+```::before```
+```::after```
+
+### States
+```:hover```
+```:lang```
+
+
+### @media
+```print```
+```portrait, landscape```
+```prefers-reduced-motion: reduce```
+
+### Properties
+```rotate3d()```
+```perspective()```
+```page-break-after```
+```cursor```
+
+## Values
+``
+
+## Expirements that didn't work out
+CSS counters. I tried to hack them and use them as counters. 
+I managed to do that, but it doesn't
+
+* Tried 
 
 ## Features
 
