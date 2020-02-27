@@ -18,7 +18,8 @@ body{
 }
 
 form{
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat()
 }
 
 label{
@@ -61,7 +62,28 @@ label[for=beer]{
 }
 
 label[for=mushrooms]{
-  background-image: url(../img/mushroom.png);
+  background-image: url(../img/mushroom-label.png);
+}
+
+embed{
+  /* opacity: 0; */
+  display: none;
+}
+
+/* input[type="radio"][value="vodka"]:checked ~ section:nth-of-type(1) article:hover{
+  cursor: url("../img/vodka.png"), auto;
+  animation: drunk-mode-container 3s infinite;
+} */
+
+/* Drunk animation on person */ 
+
+input[type="radio"][value="vodka"]:checked ~ section:nth-of-type(1) article:hover{
+  cursor: url("../img/vodka.png"), auto;
+  animation: drunk-mode 10s infinite, drunk-mode-container 3s infinite;
+}
+
+input[type="checkbox"][name="audio"]:unchecked ~ section:nth-of-type(1) embed{
+  display: none;
 }
 
 input[type="radio"][value="vodka"]:checked ~ section:nth-of-type(1){
@@ -83,6 +105,8 @@ input[type="radio"][value="beer"]:checked ~ section:nth-of-type(1) article heade
 input[type="radio"][value="1"]:checked ~ section article::after{
   content: '1';
 }
+
+
 
 input[type="radio"][value="1"]:checked ~ section:nth-of-type(1){
   animation: drunk-section 3s infinite;
@@ -168,7 +192,7 @@ article header::before{
 
 }
 
-article header:hover::after{
+input[type=checkbox]:checked article header:hover::after{
   transform: translate(0px, 13vw);
 }
 
@@ -248,7 +272,7 @@ input[name=test]:checked ~ section article{
 }
 
 
-divarticle header:hover{
+div article header:hover{
   animation: alcohol-up 3s .3s normal forwards;
 }
 

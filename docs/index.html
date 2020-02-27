@@ -26,8 +26,8 @@
   <header>
     <h1>The Fest Experience</h1>
   </header>
-
-
+  <input type="checkbox" name="audio">
+  
 <form>
   <label for="vodka">  </label>
   <label for="beer">  </label>
@@ -38,16 +38,18 @@
     I choose to put the labels up front because of a sibling selector I'm using on it
     Also I use an id on the input so when the user clicks on the label it checkes the input as well.
   -->
-    <input type="radio" name="drink" value="vodka" id="vodka">
+    <input type="radio" name="consumable" value="vodka" id="vodka">
 
 
-    <input type="radio" name="drink" value="beer" id="beer">
+    <input type="radio" name="consumable" value="beer" id="beer">
     <input type="radio" name="test" id="test">
     
-    <input type="radio" name="mushrooms" id="mushrooms">
-  <section>
-
+    <input type="radio" name="consumable" value="mushrooms" id="mushrooms">
     
+  <section>
+    <div tabindex="0"></div>
+    
+    <embed src="audio/Pink Floyd-Shine-On-You-Crazy-Diamond.mp3" />
     <article>
       <header>
         <div>
