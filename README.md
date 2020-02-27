@@ -24,12 +24,14 @@ My concept resolves around a bar. A simple nearby local pub / bar. But this time
 
 ## Expirements
 ### Selectors
-```:nth-of-type()``` example: ```:nth-of-type(odd, even, n)```
+```css :nth-of-type()``` example: ```:nth-of-type(odd, even, n)```
 ```:lang()```
 ```:not()```
 ```[attribute selector]```
 ```:checked```
 ```:root```
+```::selection```
+
 
 ### Pseudo selectors
 ```::before```
@@ -58,17 +60,40 @@ My concept resolves around a bar. A simple nearby local pub / bar. But this time
 ```transform-origin```
 ```page-break-after```
 ```-webkit-print-color-adjust:```
+```text-shadow```
+```animation-direction```
+
+## Interesting "values"
+```perspective()```
+```vertical-rl```
+```var(--black-mode, var(--brown)```
+```forwards```
 
 
-
-## Values
-
-
-## Expirements that didn't work out
+## Expirements that didn't work out (but were usefull in the learning proces)
 ### CSS Counters
 CSS counters. I tried to hack them and use them as counters. 
-I managed to do that in the following way
+I managed to do that in the following way:
 
+First I'd declare a counter on the ::after pseudo selector
+
+```css
+div article::after{
+  content: "Alc. "counter(alcohol-level)"%"; 
+  ......
+```
+
+Then I wanted to increment the counter. Manually, I tried almost every way. But I spend too much time on it in the end.
+I tried to fix 
+
+### attr() function
+
+## Things that really worked out
+### Dark-Light 
+### language direction
+Chinese was pretty hard, because that doesn't only involve
+
+## The broader scope of CSS
 
 
 ## Features

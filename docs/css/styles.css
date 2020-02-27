@@ -6,6 +6,10 @@
   --brown:#673013;
 }
 
+*::selection{
+  color: red;
+}
+
 /* input[name="dark-mode"]:checked{
   --black-mode:  #000;
 } */
@@ -41,7 +45,14 @@ body{
 
 h1{
   color:white;
+  text-align: center;
 }
+
+h1::selection{
+  text-shadow: 5px 5px black;
+}
+
+
 
 form{
   display: grid;
@@ -145,8 +156,6 @@ input[type="radio"][value="beer"]:checked ~ section:nth-of-type(1) article heade
 input[type="radio"][value="1"]:checked ~ section article::after{
   content: '1';
 }
-
-
 
 input[type="radio"][value="1"]:checked ~ section:nth-of-type(1){
   animation: var(--animation, drunk-section 3s infinite);
