@@ -46,15 +46,10 @@ My concept resolves around a bar. A simple nearby local pub / bar. But this time
 
 ### Properties
 ```rotate3d()```
-
 ```perspective()```
-
 ```page-break-after```
-
 ```cursor```
-
 ```direction```
-
 ```writing-mode```
 ```grid-auto-columns```
 ```filter```
