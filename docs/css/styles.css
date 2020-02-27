@@ -1,25 +1,52 @@
 /* @import "darkmode.css";  */
 
 :root{
-  --animation: none;
   --counter: 0;
   --black: #000;
+  --brown:#673013;
 }
 
-:lang(ar) *{
+/* input[name="dark-mode"]:checked{
+  --black-mode:  #000;
+} */
+
+
+:lang(ar){
+  direction: ltr;
+}
+
+:lang(ar) :not(div), 
+:lang(heb) :not(div),
+:lang(dv) :not(div),
+:lang(ku) :not(div),
+:lang(fa) :not(div),
+:lang(ur) :not(div){
   direction: rtl;
+}
+
+:lang(zh){
+  writing-mode: vertical-rl;
+}
+
+:lang(zh) section {
+  writing-mode: horizontal-tb;
 }
 
 body{
   font-size: 100%;
   font-family: sans-serif;
-  background-color: #673013;
+  /* background-color: #673013; */
+  background-color: var(--black-mode, var(--brown));
+  color: var(--white-mode, #000)
   /* animation: var(--animation) drunk-mode .3s infinite alternate ; */
+}
+
+h1{
+  color:white;
 }
 
 form{
   display: grid;
-  grid-template-columns: repeat()
 }
 
 label{
@@ -44,6 +71,9 @@ label:nth-last-of-type(even):hover{
   transform: scale(1.1) rotateY(-360deg) perspective(1000px);
 }
 
+
+
+
 /* label:not([for^="alc-"])::before{
   background-color: #673013;
   width: 100%;
@@ -66,8 +96,9 @@ label[for=mushrooms]{
 }
 
 embed{
-  /* opacity: 0; */
+  opacity: 0;
   display: none;
+  width: 0%;
 }
 
 /* input[type="radio"][value="vodka"]:checked ~ section:nth-of-type(1) article:hover{
@@ -79,11 +110,16 @@ embed{
 
 input[type="radio"][value="vodka"]:checked ~ section:nth-of-type(1) article:hover{
   cursor: url("../img/vodka.png"), auto;
-  animation: drunk-mode 10s infinite, drunk-mode-container 3s infinite;
+  animation: var(--animation, drunk-mode 10s infinite, drunk-mode-container 3s infinite);
 }
 
-input[type="checkbox"][name="audio"]:unchecked ~ section:nth-of-type(1) embed{
-  display: none;
+input[type="radio"][value="mushrooms"]:checked ~ section:nth-of-type(1) article:hover{
+  cursor: url("../img/mushroom.png"), auto;
+  animation: var(--animation, trip-mode 30s infinite, drunk-mode 10s infinite);
+}
+
+input[type="radio"][value="mushrooms"]:checked ~ section:nth-of-type(1) article:hover ~ embed{
+  display: block;
 }
 
 input[type="radio"][value="vodka"]:checked ~ section:nth-of-type(1){
@@ -109,7 +145,7 @@ input[type="radio"][value="1"]:checked ~ section article::after{
 
 
 input[type="radio"][value="1"]:checked ~ section:nth-of-type(1){
-  animation: drunk-section 3s infinite;
+  animation: var(--animation, drunk-section 3s infinite);
   background-color: red;
 }
 
@@ -166,7 +202,7 @@ article header,
 article header::after{
   height: 25vw;
   width: 50vw;
-  background-color: sandybrown;
+  background-color: var(--white-mode, sandybrown)
 }
 
 article header{
@@ -244,7 +280,7 @@ article:hover header > div:nth-of-type(1) div:nth-of-type(2)::before{
   transition: .5s;
 }
 
-divarticle::after{
+div article::after{
   /* content: "Alc. "counter(alcohol-level)"%"; */
   position: absolute;
   top: 1rem;
@@ -253,19 +289,19 @@ divarticle::after{
 }
 
 input[name=test]:checked ~ section{
-  animation: drunk-mode-container 10s infinite;
+  animation: var(--animation, drunk-mode-container 10s infinite);
 }
 
 /* For animating the section which gets a blur overlay */
 input[name=test]:checked ~ section article{
-  animation: drunk-mode 10s infinite;
+  animation: var(--animation, drunk-mode 10s infinite);
 }
 
 
 /* Mushrooms */
-input[name=mushrooms]:checked ~ section{
+/* input[name=mushrooms]:checked ~ section{
   animation: trip-mode 10s infinite;
-}
+} */
 
 input[name=test]:checked ~ section article{
   animation: drunk-mode 10s infinite reverse;
@@ -273,7 +309,7 @@ input[name=test]:checked ~ section article{
 
 
 div article header:hover{
-  animation: alcohol-up 3s .3s normal forwards;
+  animation: var(--animation, alcohol-up 3s .3s normal forwards);
 }
 
 /* @keyframes alcohol-up{
@@ -304,11 +340,11 @@ section{
 
 @keyframes trip-mode{
   0%, 40%, 80%{
-    filter: hue-rotate(1turn) drop-shadow(16px 16px 20px blue) invert(75%);
+    filter: hue-rotate(1turn) drop-shadow(16px 16px 20px blue) invert(75%) blur(0);
   }
 
   20%, 60%{
-    filter: hue-rotate(0turn) drop-shadow(16px 16px 20px red) invert(0%);
+    filter: hue-rotate(0turn) drop-shadow(16px 16px 20px red) invert(0%) blur(1rem);
   }
 }
 
@@ -359,17 +395,17 @@ section{
 
 
   0%, 40%, 80%{
-    transform: perspective(1000px) rotate3d(1, 1, 1, -30deg) ;
-    filter: hue-rotate(90deg)
+    /* transform: perspective(1000px) rotate3d(0, 0, 0, 0) ; */
   }
 
   20%, 60%{
-    transform: perspective(1000px) rotate3d(1, 1, 1, 30deg);
-    filter: hue-rotate(0deg)
+    /* transform: perspective(1000px) rotate3d(1, 1, 1, 30deg); */
   }
 
  
 }
+
+
 
 /* * ~ section{
   page-break-after: always  ;
@@ -378,7 +414,7 @@ section{
 
 @media (prefers-reduced-motion: reduce) {
   :root{
-    --animation: initial;
+    --animation: none;
   }
 }
 
@@ -391,4 +427,19 @@ section{
   * ~ section{
     page-break-after: always  ;
   }
+}
+
+@media (prefers-color-scheme: dark) {
+
+  
+ 
+  /* body{
+    background-color: var(--black-mode);
+  } */
+
+  :root{
+    --black-mode: #000;
+    --white-mode: #fff;
+  }
+  
 }
