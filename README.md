@@ -72,7 +72,7 @@ My concept resolves around a bar. A simple nearby local pub / bar. But this time
 
 ## Expirements that didn't work out (but were usefull in the learning proces)
 ### CSS Counters
-CSS counters. I tried to hack them and use them as counters. 
+CSS counters. I tried to hack them and use them as actual counters. The next idea was to try to save them and use them elsewhere as a state if that was somehow possible.
 I managed to do that in the following way:
 
 First I'd declare a counter on the ::after pseudo selector
@@ -93,7 +93,11 @@ I tried to fix
 ### language direction
 Chinese was pretty hard, because that doesn't only involve
 
-## The broader scope of CSS
+## What did I learn in a nuttshell?
+I learned the broader scope of CSS by learning that CSS can actually react to the users OS settings and browser settings.
+Also that the print stylesheet is quite a complex and standalone thing. It didn't quite do what I initially expected.
+
+I learned that custom properties can be assigned everywhere and are not limited to
 
 
 ## Features
