@@ -45,6 +45,7 @@ h1{
 
 form{
   display: grid;
+  grid-auto-columns: minmax(max-content, 2fr);
 }
 
 label{
@@ -80,6 +81,11 @@ label:nth-last-of-type(even):hover{
   position: absolute;
   z-index: -1;
 } */
+
+
+label{
+  filter: var(--background-grayscale);
+}
 
 label[for=vodka]{
   background-image: url(../img/vodka-label.png);
@@ -223,7 +229,6 @@ article header::before{
   content: '';
   position: absolute;
   top: 25.25vw;
-
 }
 
 input[type=checkbox]:checked article header:hover::after{
@@ -356,7 +361,6 @@ section{
 
   20%, 60%{
     filter: blur(12px);
-
   }
   /* 0%, 30%, 60%, 90%{
     transform: rotate(-10deg);
@@ -438,7 +442,7 @@ section{
   :root{
     --black-mode: #000;
     --white-mode: #fff;
-    --background-grayscale: filter: grayscale(100%);
+    --background-grayscale: grayscale(100%);
   }
 
   

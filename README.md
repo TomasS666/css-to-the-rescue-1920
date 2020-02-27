@@ -24,7 +24,12 @@ My concept resolves around a bar. A simple nearby local pub / bar. But this time
 
 ## Expirements
 ### Selectors
-```:nth-of-type()```
+```:nth-of-type()``` example: ```:nth-of-type(odd, even, n)```
+```:lang()```
+```:not()```
+```[attribute selector]```
+```:checked```
+```:root```
 
 ### Pseudo selectors
 ```::before```
@@ -36,7 +41,7 @@ My concept resolves around a bar. A simple nearby local pub / bar. But this time
 
 ### @media
 ```print```
-```portrait, landscape```
+~portrait, landscape~
 ```prefers-reduced-motion: reduce```
 
 ### Properties
@@ -44,9 +49,20 @@ My concept resolves around a bar. A simple nearby local pub / bar. But this time
 ```perspective()```
 ```page-break-after```
 ```cursor```
+```direction```
+```writing-mode```
+```grid-auto-columns```
+```filter```
+```animation```
+```content```
+```transform-origin```
+```page-break-after```
+```-webkit-print-color-adjust:```
+
+
 
 ## Values
-``
+
 
 ## Expirements that didn't work out
 ### CSS Counters
